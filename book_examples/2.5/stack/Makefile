@@ -1,4 +1,4 @@
-stack: stack.cc
+stack: stack.cpp
 	@g++ $< -o $@
 	
 clean:

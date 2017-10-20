@@ -1,4 +1,4 @@
-box: box.cc
+box: box.cpp
 	@g++ $< -o $@
 	
 clean:

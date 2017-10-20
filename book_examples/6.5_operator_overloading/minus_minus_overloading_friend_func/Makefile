@@ -1,4 +1,4 @@
-min_min_over: min_min_over.cc
+min_min_over: min_min_over.cpp
 	@g++ $< -o $@
 	
 clean:
