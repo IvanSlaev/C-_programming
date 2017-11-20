@@ -6,4 +6,6 @@ using namespace AnimalSystem;
 
 int main() {
     Animal dog = Animal(2, "doggy");
+
+    cout << dog.ISoundLike() << endl;
 }
