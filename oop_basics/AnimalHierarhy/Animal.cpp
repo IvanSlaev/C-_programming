@@ -1,17 +1,16 @@
+#include <iostream>
+#include "Animal.h"
+
 namespace AnimalSystem {
-	#include "cpplinq.hpp"
 
-	public class Animal : public ISound {
-		protected:
-			int age;
-			int name;
-			SexEnum sex;
+	using namespace std;
 
-		public:
-			virtual ISoundLike;
-			template <typename T>
-			static string GetAvegareAgeByType(Animal[] animals) {
-				int sum = from_array(animals) >> select([](Animal animal){ return animal.age }) >> sum();
-				int count = sizeof(animals)/sizeof(animals[0])
-			}	
+    Animal::Animal(int age, string name) {
+        this->age = age;
+        this->name = name;
+    }
+
+    string Animal::ISoundLike() {
+        return "bau";
+    }
 }
