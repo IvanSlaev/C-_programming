@@ -1,13 +1,13 @@
 #include <iostream>
-#include "animal.hpp"
+#include <animal.hpp>
 
 namespace AnimalSystem {
 
     using namespace std;
 
-    class Cat : protected Animal {
+    class Dog : public Animal {
         public:
-            Cat(int, string);
+            Dog(int, string);
             virtual string ISoundLike();
-    };
+	};
 }

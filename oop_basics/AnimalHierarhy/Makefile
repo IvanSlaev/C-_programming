@@ -1,18 +1,24 @@
-NAME=AnimalSystem
+PROJ_NAME=AnimalSystem
 
-OBJ = animal_system.o dog.o cat.o
+export PROJ_DIR := $(shell readlink -e $(CURDIR))
 
-all: $(NAME)
+OBJ_FILES = animal_system.o dog.o cat.o
+OBJ+=$(addprefix src/,$(OBJ_FILES))
 
 CC=g++
 CXXFLAGS+=-g -Wall
 LDLIBS+=-lstdc++
+INCDIR+=$(PROJ_DIR)/inc/
+LDFLAGS+=$(addprefix -I ,$(INCDIR))
 
-%.o: %.c
-	@$(CC) -c -o $@ $<
+all: $(PROJ_NAME)
+
+%.o: %.cpp
+	$(CC) -c $(LDFLAGS) -o $@ $<
+
+$(PROJ_NAME): $(OBJ)
+	$(CC) $(LDFLAGS) -o $@ $^
 	
-$(NAME): $(OBJ)
-	@$(CC) -o $@ $^
-
 clean:
-	@rm -rf $(NAME) *.o
+	@rm -rf $(PROJ_NAME)
+	@find -iname "*.o" -delete
