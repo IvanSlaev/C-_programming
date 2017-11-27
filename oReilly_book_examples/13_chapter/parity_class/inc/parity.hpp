@@ -4,15 +4,15 @@
 #ifndef _PARITY_HPP
 #define _PARITY_HPP
 
-namespace ParitySystem {
+namespace parity_system {
 
 	using namespace std;
 
-	class Parity {
+	class parity {
 		protected:
 			int counter;
 		public:
-			Parity();
+			parity();
             void put(void);
             int test(void);
 	};

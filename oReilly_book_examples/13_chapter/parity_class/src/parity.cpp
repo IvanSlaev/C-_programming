@@ -2,19 +2,19 @@
 
 #include <parity.hpp>
 
-namespace ParitySystem {
+namespace parity_system {
 
     using namespace std;
 
-    Parity::Parity() {
+    parity::parity() {
         this->counter = 0;
     }
 
-    void Parity::put() {
+    void parity::put() {
         this->counter++;
     }
 
-    int Parity::test() {
+    int parity::test() {
         return this->counter % 2 == 1 ? 0 : 1;
     }
 }

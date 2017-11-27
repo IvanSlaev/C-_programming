@@ -3,10 +3,10 @@
 #include <parity.hpp>
 
 using namespace std;
-using namespace ParitySystem;
+using namespace parity_system;
 
 int main() {
-    Parity parity_inst;
+    parity parity_inst;
 
     cout << "No call to put (even return 1), result: " << parity_inst.test() << endl;
     parity_inst.put();
