@@ -12,18 +12,20 @@ namespace sharing_file {
 	class file_sharing_class_2;
 
 	class file_sharing_class_1 {
-	private:
-		int flag;
-	public:
-		void open_file(void);
-		void close_file(void);
-		friend int is_the_file_in_use(file_sharing_class_1, file_sharing_class_2);
+    protected:
+        int flag;
+    public:
+        file_sharing_class_1();
+        void open_file(void);
+        void close_file(void);
+        friend int is_the_file_in_use(file_sharing_class_1, file_sharing_class_2);
 	};
 
     class file_sharing_class_2 {
-    private:
+    protected:
         int flag;
     public:
+        file_sharing_class_2();
         void open_file(void);
         void close_file(void);
         friend int is_the_file_in_use(file_sharing_class_1, file_sharing_class_2);
